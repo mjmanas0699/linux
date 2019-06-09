@@ -73,4 +73,18 @@ drwxrwxr-t+ 2 root root 19 Jun  9 16:39 .
 drwxrwxr-t+ 2 root root 19 Jun  9 16:39 .
 [root@ip-172-31-7-225 manas]# ls -ld a.txt
 -r--r-x-w-. 1 root root 0 Jun  9 16:39 a.txt
+[ec2-user@ip-172-31-7-225 ~]$ cd manas
+[ec2-user@ip-172-31-7-225 manas]$ chmod ugo-rwx a.txt
+chmod: cannot access ‘a.txt’: No such file or directory
+[ec2-user@ip-172-31-7-225 manas]$ ls
+Untitled.ipynb
+[ec2-user@ip-172-31-7-225 manas]$ sudo -i
+[root@ip-172-31-7-225 ~]# cd manas
+[root@ip-172-31-7-225 manas]# ls
+a.txt
+[root@ip-172-31-7-225 manas]# chmod ugo-rwx a.txt
+[root@ip-172-31-7-225 manas]# ls -ld
+drwxrwxr-t+ 2 root root 19 Jun  9 16:39 .
+[root@ip-172-31-7-225 manas]# ls -ld a.txt
+----------. 1 root root 0 Jun  9 16:39 a.txt
 [root@ip-172-31-7-225 manas]#
